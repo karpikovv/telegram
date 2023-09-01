@@ -1,6 +1,6 @@
 import requests
 import json
-from _SITE_API.param import headers
+from _site_api.param import headers
 
 
 def site_low_req(destination_id, count_print):

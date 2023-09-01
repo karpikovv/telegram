@@ -1,7 +1,7 @@
 from telebot import types
-from _SITE_API.functions import *
-from _SQL_bd.bd_function import *
-from _BOT_API import bot, markup_base, help_str
+from _site_api.functions import *
+from _sql_bd_api.bd_function import *
+from _bot_api import bot, markup_base, help_str
 
 
 @bot.message_handler(commands=['start'])
