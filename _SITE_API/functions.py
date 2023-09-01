@@ -25,9 +25,6 @@ def site_low_req(destination_id, count_print):
 
     response = requests.request("POST", url, json=payload, headers=headers)
 
-    #with open('prop_low.txt', 'w') as f:
-    #    json.dump(json.loads(response.text)["data"]["propertySearch"]["properties"], f, indent=2)
-
     return response
 
 
@@ -59,10 +56,6 @@ def site_best_req(destination_id, count_print, min_cost, max_cost, stars_count):
     }
 
     response = requests.request("POST", url, json=payload, headers=headers)
-
-    #with open('prop_best.txt', 'w') as f:
-    #    json.dump(json.loads(response.text)["data"]["propertySearch"]["properties"], f, indent=2)
-
     return response
 
 
@@ -73,13 +66,9 @@ def site_get_id(city):
     response_location = requests.request("GET", url_location, headers=headers, params=querystring_location)
     hot_text = json.loads(response_location.text)
 
-    #with open('searchV2.txt', 'w') as f:
-    #   json.dump(hot_text, f, indent=2)
-
     if hot_text["sr"][0]["type"] == "CITY":
         name = hot_text["sr"][0]["regionNames"]["fullName"]
-        id = hot_text["sr"][0]["gaiaId"]
-        return id, name
+        gid = hot_text["sr"][0]["gaiaId"]
+        return gid, name
     else:
         return 0, 0
-
