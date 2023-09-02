@@ -1,8 +1,9 @@
-from _bot_api.bot import *
+from loader import bot
+import _bot_api
 
-bot.infinity_polling()
-
-
+if __name__ == "__main__":
+    print(1)
+    bot.infinity_polling()
 
 
 
