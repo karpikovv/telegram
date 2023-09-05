@@ -1,5 +1,6 @@
-from loader import bot
 import _bot_api.handlers as func
+from loader import bot
+
 from ..keyboards.reply_back import markup_base
 
 
@@ -18,7 +19,7 @@ def check_command(message, destination_id=0, count_print=0, photo_fl=False):
         func.historydelete.history_delete(message)
         return 1
     elif destination_id and count_print:
-        if message.text == 'Топ дешевых':
+        if message.text == "Топ дешевых":
             func.low_price.low(message, destination_id, count_print, photo_fl)
         elif message.text == "Подобрать подходящий":
             func.best_price.best_deal(message, destination_id, count_print, photo_fl)

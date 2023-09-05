@@ -1,6 +1,5 @@
 from telebot import types
 
-
 markup_choice = types.ReplyKeyboardMarkup(resize_keyboard=True, row_width=2)
 
 item_low = types.KeyboardButton("Топ дешевых")

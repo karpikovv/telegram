@@ -1,3 +1,1 @@
-from . import best_request
-from . import lower_request
-from . import get_id_request
+from . import best_request, get_id_request, lower_request

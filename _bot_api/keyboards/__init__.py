@@ -1,3 +1,1 @@
-from . import reply_back
-from . import reply_bool
-from . import reply_choice
+from . import reply_back, reply_bool, reply_choice
